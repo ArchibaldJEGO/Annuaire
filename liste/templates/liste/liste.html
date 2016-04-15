@@ -1,24 +1,17 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Bienvenue sur l'annuaire !</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    </head>
+{% extends "liste\base.html" %}
+{% block title %}{{block.super}} - Liste{% endblock %}
+{% block body %}
+<div class="page-header">
+    <h1>Annuaire</h1>
+</div>
+<div class="panel-body">
+    <ul class="list-group">
+        {% for personne in personnes %}
+        <a href={% url 'liste.views.info' personne.id%} class="list-group-item">{{personne.nom|upper}} {{personne.prenom}}</a>
+        {% empty %}
+        <p>Aucune personne.</p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
 
-    <body class="col-md-12">
-        <div class="page-header">
-            <h1>Annuaire</h1>
-        </div>
-        <div class="panel-body">
-            <ul class="list-group">
-                {% for personne in personnes %}
-                <a href={% url 'liste.views.info' personne.id%} class="list-group-item">{{personne.nom|upper}} {{personne.prenom}}</a>
-                {% empty %}
-                <p>Aucune personne.</p>
-                {% endfor %}
-            </ul>
-        </div>
-    </body>
-</html>
