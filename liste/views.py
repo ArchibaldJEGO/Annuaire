@@ -1,21 +1,18 @@
 from datetime import datetime
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
-from liste.models import Personne
 from liste.forms import PersonneForm
+from liste.models import Personne
 
-def personne(request):
+def formulaire(request):
     if request.method == 'POST':
         form = PersonneForm(request.POST)
         
         if form.is_valid():
-            prenom = form.cleaned_data['prenom']
-            nom = form.cleaned_data['nom']
-            phone = form.cleaned_data['phone']
-            email = form.cleaned_data['email']
-            
             form.save()
+            return HttpResponseRedirect('/liste/')
         
     else:
         form = PersonneForm()

@@ -2,26 +2,32 @@
 {% block title %}{{block.super}} - Formulaire{% endblock %}
 {% block body %}
 <div class="page-header">
-    <h1>Formulaire</h1>
+    <h1>Formulaire
+        <a href={% url 'liste.views.liste'%}>
+           <button type="button" class="btn btn-primary btn-lg">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Retour
+            </button>
+        </a>
+    </h1>
 </div>
 
 {% load bootstrap3 %}
 
-<form action="{% url 'liste.views.personne' %}" method="post" class="form">
+<form action="{% url 'liste.views.formulaire' %}" method="post" class="form">
     {% csrf_token %}
     {% bootstrap_form form %}
-    <!--{{ form.as_p }}
-    <label for="exampleInputEmail1">Prénom</label>
-    <input class="form-control" name="prenom" placeholder="John">
-    <label for="exampleInputEmail1">Nom</label>
-    <input class="form-control" name="nom" placeholder="Do">
-    <label for="exampleInputEmail1">Téléphone</label>
-    <input class="form-control" name="phone" placeholder="+33600000000">
-    <label for="exampleInputEmail1">Email</label>
-    <input type="email" class="form-control" name="email" placeholder="adresse@email.com">-->
+<!--    <label>Prénom</label>
+    <input class="form-control" name="prenom" placeholder="John"><br/>
+    <label>Nom</label>
+    <input class="form-control" name="nom" placeholder="Do"><br/>
+    <label>Téléphone*</label>
+    <input class="form-control" name="phone" placeholder="+33600000000"><br/>
+    <label>Email</label>
+    <input type="email" class="form-control" name="email" placeholder="adresse@email.com"><br/>-->
+    <p>* : facultatif</p>
     <hr/>
     {% buttons %}
-    <button type="button" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Valider</button>
     {% endbuttons %}
 </form>
 {% endblock %}
