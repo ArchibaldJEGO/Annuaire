@@ -12,20 +12,15 @@ def formulaire(request):
         
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/liste/')
+            return HttpResponseRedirect('/home/')
         
     else:
         form = PersonneForm()
             
     return render(request, 'liste/form.html', locals())
     
-def liste(request):
+def home(request):
     personnes = Personne.objects.all().order_by('nom')
     return render(request, 'liste/liste.html', {'personnes': personnes})
-
-def home(request):
-    """ Exemple de page HTML, non valide pour que l'exemple soit concis """
-    text = 'Montez en voiture'
-    return HttpResponse(text)
 
 # Create your views here.
