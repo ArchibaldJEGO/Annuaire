@@ -5,7 +5,7 @@
     <h1>Annuaire
         <a href={% url 'liste.views.formulaire'%}>
            <button type="button" class="btn btn-primary btn-lg">
-                <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter une entrée
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter une entrée
             </button>
         </a>
     </h1>
@@ -16,16 +16,32 @@
             <tr class="table-striped">
                 <th>Prénom</th>
                 <th>Nom</th>
-                <th>Téléphone</th>
-                <th>Email</th>
+                <th class="text-center">Téléphone</th>
+                <th class="text-center">Email</th>
+                <th></th>
+                <th></th>
             </tr></thead>
         <tbody>
             {% for personne in personnes %}
             <tr>
                 <td>{{personne.prenom}}</td>
                 <td>{{personne.nom}}</td>
-                <td>{{personne.phone}}</td>
-                <td>{{personne.email}}</td>
+                <td class="text-center">
+                    {%if personne.phone%} {{personne.phone}}
+                    {%else%} --
+                    {%endif%}
+                </td>
+                <td class="text-center">{{personne.email}}</td>
+                <td>
+                    <a href={% url 'liste.views.edit' personne.id%}>
+                       <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href={% url 'liste.views.delete' personne.id%}>
+                       <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </a>
+                </td>
             </tr>
             {% empty %}
         <p>Aucune personne.</p>
