@@ -22,14 +22,3 @@ def formulaire(request):
 def liste(request):
     personnes = Personne.objects.all().order_by('nom')
     return render(request, 'liste/liste.html', {'personnes': personnes})
-
-def info(request, id):
-    personne = get_object_or_404(Personne, id=id)
-    return render(request, 'liste/personne.html', {'personne': personne})
-
-def home(request):
-    """ Exemple de page HTML, non valide pour que l'exemple soit concis """
-    text = 'Montez en voiture'
-    return HttpResponse(text)
-
-# Create your views here.

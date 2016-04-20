@@ -7,5 +7,4 @@ urlpatterns = [
     url(r'^home/$', 'liste.views.home'),
     url(r'^form/$', 'liste.views.formulaire'),
     url(r'^liste/$', 'liste.views.liste'),
-    url(r'^id/(?P<id>\d+)$', 'liste.views.info'),
 ]

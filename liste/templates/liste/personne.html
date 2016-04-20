@@ -1,9 +1,0 @@
-﻿{% extends "liste\base.html" %}
-{% block title %}{{block.super}} - {{personne.prenom}} {{personne.nom|upper}}{% endblock %}
-{% block body %}
-<div class="page-header">
-    <h1>{{personne.prenom}} {{personne.nom|upper}} </h1>
-</div>
-<p>Téléphone: {{ personne.phone }}</p>
-<p>Email : {{ personne.email }}</p>
-{% endblock %}

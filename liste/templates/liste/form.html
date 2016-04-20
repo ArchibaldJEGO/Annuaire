@@ -16,15 +16,6 @@
 <form action="{% url 'liste.views.formulaire' %}" method="post" class="form">
     {% csrf_token %}
     {% bootstrap_form form %}
-<!--    <label>Prénom</label>
-    <input class="form-control" name="prenom" placeholder="John"><br/>
-    <label>Nom</label>
-    <input class="form-control" name="nom" placeholder="Do"><br/>
-    <label>Téléphone*</label>
-    <input class="form-control" name="phone" placeholder="+33600000000"><br/>
-    <label>Email</label>
-    <input type="email" class="form-control" name="email" placeholder="adresse@email.com"><br/>-->
-    <p>* : facultatif</p>
     <hr/>
     {% buttons %}
     <button type="submit" class="btn btn-primary">Valider</button>

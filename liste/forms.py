@@ -7,8 +7,8 @@ class PersonneForm(ModelForm):
         model = Personne
         fields = ['prenom', 'nom', 'phone', 'email']
     def clean_nom(self):
-        nom = self.cleaned_data['nom']
-        return nom.upper()
+        nom = self.cleaned_data['nom'].upper()
+        return nom
     def clean_prenom(self):
-        prenom = self.cleaned_data['prenom']
-        return prenom.title()
+        prenom = self.cleaned_data['prenom'].title()
+        return prenom
