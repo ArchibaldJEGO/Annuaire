@@ -18,6 +18,6 @@ Projet d'annuaire réalisé avec le framework Django.
 #Usage
 
  * Lancez la commande ```python manage.py runserver.```
- * Connectez vous sur votre localhost.
+ * Connectez vous sur le port 8000 de votre localhost.
 
 Vous pouvez maintenant ajouter, modifier et supprimer des personnes dans l'annuaire.
