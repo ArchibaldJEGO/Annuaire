@@ -10,7 +10,7 @@ Projet d'annuaire réalisé avec le framework Django.
 #Installation
 
 ```sh
- $ git clone https://github.com/DrowningOutOfTheBlue/Annuaire.git
+ $ git clone https://github.com/ArchibaldJEGO/Annuaire.git
  $ cd Annuaire
  $ pip install -r requirements.txt
 ```
