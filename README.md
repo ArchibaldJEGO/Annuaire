@@ -4,8 +4,8 @@ Projet d'annuaire réalisé avec le framework Django.
 
 #Requirements
 
--Python >= 3.4
--Django >= 1.8
+ - Python >= 3.4
+ - Django >= 1.8
 
 #Installation
 
