@@ -21,3 +21,5 @@ Projet d'annuaire réalisé avec le framework Django.
  * Connectez vous sur le port 8000 de votre localhost.
 
 Vous pouvez maintenant ajouter, modifier et supprimer des personnes dans l'annuaire.
+
+Les numéros de téléphone sont facultatifs et sont aux formats internationales (ex : +33122334455)
