@@ -9,11 +9,12 @@ Projet d'annuaire réalisé avec le framework Django.
 
 #Installation
 
-> pip install -r requirements.txt
+$ git clone https://github.com/DrowningOutOfTheBlue/Annuaire.git
+$ cd Annuaire
+$ pip install -r requirements.txt
 
 #Usage
- 
- * git clone https://github.com/DrowningOutOfTheBlue/Annuaire.git
+
  * Lancez la commande python manage.py runserver.
  * Connectez vous sur votre localhost.
 
