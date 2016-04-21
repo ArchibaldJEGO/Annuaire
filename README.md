@@ -12,8 +12,9 @@ Projet d'annuaire réalisé avec le framework Django.
 > pip install -r requirements.txt
 
 #Usage
-
-Lancez la commande python manage.py runserver.
-Connectez vous sur votre localhost.
+ 
+ * git clone https://github.com/DrowningOutOfTheBlue/Annuaire.git
+ * Lancez la commande python manage.py runserver.
+ * Connectez vous sur votre localhost.
 
 Vous pouvez maintenant ajouter, modifier et supprimer des personnes dans l'annuaire.
